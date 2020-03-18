@@ -1,0 +1,37 @@
+body {
+    background-color: blueviolet;
+    color: white;
+}
+
+.container {
+    padding: 10px;
+    background-color: blue;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 40%;
+    width: 60%;
+    
+}
+
+#page-title {
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 60%;
+    height: auto;
+}
+
+.col-left {
+    float: left;
+}
+
+.col-right {
+    float: right;
+}

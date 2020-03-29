@@ -5,30 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather-app</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body onload="startTime()">
+<body onload="startTime(), getLocation()">
     <div class="container">
-        <div id="page-title">
-            <h2>Weather Report</h2>
+        <div class="row">
+            <div id="page-title">
+                <h2>Weather Report</h2>
+            </div>
+            <div id="errormsg"></div>
         </div>
-        <div id="errromsg"></div>
-        <div class="col-left">
-            <div id="tdate"> </div>
+        <div class="row">
+            <div class="col col-left">
+                <div id="tdate"> </div>
             <div id="clock">time clock</div>
+            </div>
+            <div class="col col-mid">
+                <svg height="400" width="200">
+                    <line x1="200" y1="200" x2="200" y2="20" style="stroke: aqua;stroke-width:5" />
+                    Sorry svg not supported.
+                </svg>
+            </div>
+            <div class="col col-right">
+                <div class="col-right">
+                    <div id="temp">place for icon</div>
+                    <div id="minutely">temperature record</div>
+                    <div id="location">Location</div>
+                </div>
+            </div>
         </div>
         <!-- Vertical line -->
-        <svg height=400; width=200>
-            <line x1=200 y1=200 x2=200 y2=20 style="stroke: aqua;stroke-width:5" />
-            Sorry svg not supported.
-        </svg>
-        <div class="col-right">
-            <div id="icon">place for icon</div>
-            <div id="reading">temperature record</div>
-        </div>
+        <a href=""></a>
     </div>
 
     <script src="/js/main.js"></script>
-    <!-- Suman Nepali, 18.03.2020 -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW0L9nm14Jclo6Q5TO8myXQ_86UxCHTqs&libraries=places"></script>
+        <!-- Suman Nepali, 18.03.2020 -->
 </body>
 </html>

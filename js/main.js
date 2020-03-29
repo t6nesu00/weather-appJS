@@ -18,3 +18,34 @@ function checkTime(i) {
     }
     return i;
 }
+
+
+function weather() {
+  var location = document.getElementById("location");
+  var apiKey = "29588a59053d7a58f9d5aae93dc9722e";
+  var url = "https://api.forecast.io/forecast/";
+
+  navigator.geolocation.getCurrentPosition(success, error);
+
+  function success(position) {
+    latitude = position.coords.latitude;
+    longitute = position.coords.longitude;
+
+    location.innerHTML = 
+      "Latitude is " + latitude + " Longitude " ;
+
+    $.getJSON(
+      url + apiKey + "/" + latitude + "," + longitue + "?callback=?",
+      function(data) {
+        $("#temp").html(data.currently.temperature + "F");
+        $("#minutely").html(data.minutely.summary);
+      }
+    );
+  }
+  function error(){
+    location.innerHTML = "Unable to retrieve your location";
+  }
+  location.innerHTML = "Locating...";
+}
+weather();
+

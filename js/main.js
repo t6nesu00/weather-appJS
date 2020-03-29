@@ -22,7 +22,7 @@ function checkTime(i) {
 
 function weather() {
   var location = document.getElementById("location");
-  var apiKey = "29588a59053d7a58f9d5aae93dc9722e";
+  var apiKey = "API_KEy";
   var url = "https://api.forecast.io/forecast/";
 
   navigator.geolocation.getCurrentPosition(success, error);
